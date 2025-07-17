@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SPN21 Maths Worksheet Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>SPN21 Maths Worksheet Generator</h1>
+    <label for="year">Year Level:</label>
+    <select id="year">
+      <option value="7">Year 7</option>
+      <option value="8">Year 8</option>
+      <option value="9">Year 9</option>
+      <option value="10">Year 10</option>
+      <option value="11">Year 11</option>
+    </select>
+    <label for="topic">Topic:</label>
+    <select id="topic">
+      <option value="fractions">Fractions & Decimals</option>
+      <option value="percentage">Percentage</option>
+      <option value="volume">Volume</option>
+      <option value="equations">Linear Equations</option>
+      <option value="probability">Probability</option>
+    </select>
+    <label for="numQuestions">Number of Questions:</label>
+    <input type="number" id="numQuestions" value="5" min="1" max="20">
+    <button onclick="generateWorksheet()">Generate Worksheet</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+    <div id="worksheet"></div>
+    <h3>Answer Key</h3>
+    <div id="answers"></div>
+  </div>
+  <script src="jsPDF.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
